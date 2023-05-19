@@ -19,5 +19,6 @@ a {
 }
 
 a:hover {
-    border-bottom: 3px solid #212121;
+    border-bottom: 2px solid #212121;
+    cursor: pointer;
 }
