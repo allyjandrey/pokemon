@@ -5,3 +5,13 @@
 
   --third: #F5DB13;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
