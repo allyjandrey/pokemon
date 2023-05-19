@@ -1,0 +1,13 @@
+.section_container {
+    background: linear-gradient(180deg, var(--third) 0%, var(--primary) 100%);
+    min-height: calc(100vh - 93px);
+}
+
+h1 {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 84px;
+    letter-spacing: 4px;
+}
