@@ -24,3 +24,10 @@ a:hover {
     border-bottom: 2px solid var(--dark);
     cursor: pointer;
 }
+
+.div_container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
