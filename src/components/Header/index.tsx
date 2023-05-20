@@ -8,10 +8,10 @@ export const Header = () => {
             <div className={styles.div_container}>
                 <img className={styles.img} src={logo} alt="Logo do pokémon" />
                 <nav>
-                    <NavLink to={`/home`}>Home</NavLink>
-                    <NavLink to={`/Pokédex`}>Pokédex</NavLink>
-                    <NavLink to={`/Legendaries`}>Legendaries</NavLink>
-                    <NavLink to={`/Documentation`}>Documentation</NavLink>
+                    <NavLink to={`/home`}  className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>Home</NavLink>
+                    <NavLink to={`/Pokédex`} className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>Pokédex</NavLink>
+                    <NavLink to={`/Legendaries`} className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>Legendaries</NavLink>
+                    <NavLink to={`/Documentation`} className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>Documentation</NavLink>
                 </nav>
             </div>
         </header>
