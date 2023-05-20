@@ -5,15 +5,33 @@ import { NavLink } from "react-router-dom"
 export const Header = () => {
     return (
         <header className={styles.header}>
-            <div className={styles.div_container}>
-                <img className={styles.img} src={logo} alt="Logo do pokémon" />
-                <nav>
-                    <NavLink to={`/`}  className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>Home</NavLink>
-                    <NavLink to={`/Pokédex`} className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>Pokédex</NavLink>
-                    <NavLink to={`/Legendaries`} className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>Legendaries</NavLink>
-                    <NavLink to={`/Documentation`} className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>Documentation</NavLink>
+            <section className={styles.section_container}>
+                <article className={styles.article_container}>
+                    <img src={logo} alt="Logo do pokémon" />
+                </article>
+                <nav className={styles.nav_container}>
+                    <NavLink
+                        to={`/`}
+                        className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>
+                        Home
+                    </NavLink>
+                    <NavLink
+                        to={`/Pokédex`}
+                        className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>
+                        Pokédex
+                    </NavLink>
+                    <NavLink
+                        to={`/Legendaries`}
+                        className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>
+                        Legendaries
+                    </NavLink>
+                    <NavLink
+                        to={`/Documentation`}
+                        className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>
+                        Documentation
+                    </NavLink>
                 </nav>
-            </div>
+            </section>
         </header>
     )
 }
