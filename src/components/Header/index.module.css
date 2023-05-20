@@ -10,24 +10,35 @@
     box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
 }
 
-.img {
-    margin-left: 157px;
-}
-
-a {
-    font-size: 25px;
-    padding-inline: 29px;
-    
-}
-
-a:hover {
-    border-bottom: 2px solid var(--dark);
-    cursor: pointer;
-}
-
 .div_container {
     width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.img {
+    margin-left: 157px;
+}
+
+.active {
+    font-weight: 500;
+    font-size: 25px;
+    padding-inline: 29px;
+
+    color: var(--dark);
+    
+    border-bottom: 3px solid var(--dark);
+}
+
+.inactive {
+    font-weight: 500;
+    font-size: 25px;
+    padding-inline: 29px;
+
+    color: var(--dark);
+}
+
+.inactive:hover {
+    cursor: pointer;
 }
