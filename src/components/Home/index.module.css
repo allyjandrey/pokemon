@@ -41,3 +41,8 @@ h2 {
 
     color: var(--dark);
 }
+
+.button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
