@@ -5,26 +5,35 @@
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
     background-color: var(--third);
     box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
 }
 
-.div_container {
-    width: 80%;
+.section_container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 310px;
 }
 
-.img {
-    margin-left: 157px;
+.article_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 66px;
 }
 
 .active {
     font-weight: 500;
     font-size: 25px;
-    padding-inline: 29px;
 
     color: var(--dark);
     
@@ -34,7 +43,6 @@
 .inactive {
     font-weight: 500;
     font-size: 25px;
-    padding-inline: 29px;
 
     color: var(--dark);
 }
