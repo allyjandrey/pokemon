@@ -2,7 +2,7 @@ import styles from './index.module.css'
 import banner from '../../assets/BannerCompleto.svg'
 
 
-export const Home = () => {
+export const ContentHome = () => {
     return (
         <section className={styles.section_container}>
             <main>
