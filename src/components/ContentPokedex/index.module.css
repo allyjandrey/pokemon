@@ -31,14 +31,14 @@
     margin-top: 50px;
 }
 
+.h1_class {
+    font-size: 35px;
+}
+
 .article_container_input {
     margin-top: 20px;
 }
 
 .article_container_select {
     margin-top: 36px;
-}
-
-.h1_class {
-    font-size: 45px;
 }
