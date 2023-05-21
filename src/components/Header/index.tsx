@@ -16,7 +16,7 @@ export const Header = () => {
                         Home
                     </NavLink>
                     <NavLink
-                        to={`/Pokédex`}
+                        to={`/Pokedex`}
                         className={({ isActive }) => (isActive ? styles.active : styles.inactive)}>
                         Pokédex
                     </NavLink>
