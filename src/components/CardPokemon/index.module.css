@@ -4,8 +4,6 @@
     border-radius: 8px;
 
     background: var(--white);
-
-    transform: rotate(-180deg);
 }
 
 .article_container {
