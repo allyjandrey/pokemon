@@ -1,0 +1,40 @@
+.section_container {
+    width: 351px;
+    height: 136px;
+    border-radius: 8px;
+
+    background: var(--white);
+
+    transform: rotate(-180deg);
+}
+
+.article_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.article_container h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: var(--dark);
+
+    text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+}
+
+.pokemon_stats {
+    display: flex;
+}
+
+.circle {
+    width: 37px;
+    height: 36px;
+    border: 3px solid var(--dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
