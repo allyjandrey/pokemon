@@ -1,11 +1,23 @@
+.section_container {
+    align-items: center;
+    justify-content: center;
+}
+
 .input_container {
+    font-family: Source Sans Pro;
     width: 1088px;
     height: 53px;
     border-radius: 40px;
     border: none;
 
+    padding: 0px 31px;
+
     background: #F2F2F2;
     
     box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
-    border-radius: 40px;;
+    border-radius: 40px;
+}
+
+.h1_class {
+    font-size: 45px;
 }
