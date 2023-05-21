@@ -12,13 +12,13 @@ export const ContentPokedex = () => {
                 </article>
                 <article>
                     <select>
-                        <option>Type</option>
+                        <option disabled selected hidden>Type</option>
                     </select>
                     <select>
-                        <option>Attack</option>
+                        <option disabled selected hidden>Attack</option>
                     </select>
                     <select>
-                        <option>Experience</option>
+                        <option disabled selected hidden>Experience</option>
                     </select>
                 </article>
             </main>
