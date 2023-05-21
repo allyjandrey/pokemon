@@ -14,13 +14,29 @@
     padding: 0px 31px;
 
     background: #F2F2F2;
-    
+
     box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
     border-radius: 40px;
 }
 
 .input_container:focus-visible {
     outline: none
+}
+
+.article_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 73px;
+    margin-top: 50px;
+}
+
+.article_container_input {
+    margin-top: 20px;
+}
+
+.article_container_select {
+    margin-top: 36px;
 }
 
 .h1_class {
