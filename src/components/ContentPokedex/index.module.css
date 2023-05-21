@@ -1,7 +1,7 @@
 .section_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: calc(100vh - 93px);
+
+    background: linear-gradient(180deg, #FFFFFF 30.32%, #F5F5F5 100%);
 }
 
 .input_container {
@@ -36,11 +36,18 @@
 }
 
 .article_container_input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
 }
 
 .article_container_select {
-    margin-top: 36px;
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 36px 0px 0px 200px;
 }
 
 .select_container {
@@ -65,5 +72,13 @@
     background-image: url('../../assets/selectArrow.svg');
     background-repeat: no-repeat;
     background-position: 115px;
-    
+
+}
+
+.select_container:hover {
+    cursor: pointer;
+}
+
+.select_container:focus {
+    outline: none;
 }
