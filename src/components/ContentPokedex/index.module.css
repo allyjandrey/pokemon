@@ -18,6 +18,10 @@
     border-radius: 40px;
 }
 
+.input_container:focus-visible {
+    outline: none
+}
+
 .h1_class {
     font-size: 45px;
 }
