@@ -51,6 +51,32 @@
     box-sizing: border-box;
 }
 
+.article_pokemon_element {
+    display: flex;
+}
+
+.pokemon_element {
+    background: #73D677;
+    box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+    border-radius: 11px;
+}
+
+.pokemon_element h6 {
+    width: 74px;
+    height: 16px;
+
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+
+    color: #212121;
+
+    border: 0;
+    margin: 0;
+}
+
 .pokemon_container {
     width: 231px;
 }
