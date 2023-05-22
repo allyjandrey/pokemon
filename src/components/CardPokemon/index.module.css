@@ -9,7 +9,6 @@
 }
 
 .article_container {
-    display: flex;
     width: 119px;
 }
 
@@ -26,8 +25,7 @@
 }
 
 .pokemon_stats {
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
 }
 
 .pokemon_stats h6 {
