@@ -1,16 +1,16 @@
 .section_container {
-    width: 351px;
+    width: 350px;
     height: 136px;
     border-radius: 8px;
     display: flex;
-    justify-content: center;
-    align-items: center;
 
     background: var(--white);
+    filter: drop-shadow(4px 4px 4px rgba(33, 33, 33, 0.1));
 }
 
 .article_container {
     display: flex;
+    width: 119px;
 }
 
 .article_container h3 {
