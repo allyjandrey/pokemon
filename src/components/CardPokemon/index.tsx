@@ -1,7 +1,7 @@
 import styles from './index.module.css'
 import { Pokemon, RequestInfoPokemon } from '../../models/pokemons'
 import { api } from '../../services/api'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const CardPokemon = () => {
     const [Pokemons, setPokemons] = useState<Pokemon[]>([])
@@ -16,6 +16,36 @@ export const CardPokemon = () => {
             defense: response.data.stats[2].base_stat
         }
     }
+
+    useEffect(() => {
+        async function getPokemons() {
+            const response = await api.get('pokemon/?limit=20$offset=20')
+            const { res } = response.data;
+            const dataPokemons = await Promise.all(
+                res.map(async (pokemon: Pokemon) => {
+                    const {
+                        id,
+                        types,
+                        image,
+                        attack,
+                        defense
+                    } = await GetInfoPokemons(pokemon.url);
+
+                    return {
+                        name: pokemon.name,
+                        id,
+                        types,
+                        image,
+                        attack,
+                        defense
+                    }
+                })
+            )
+            console.log(dataPokemons)
+            setPokemons(dataPokemons);
+        }
+        getPokemons()
+    }, [])
 
     return (
         <section className={styles.section_container}>
