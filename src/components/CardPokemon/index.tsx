@@ -13,9 +13,9 @@ export const CardPokemon = () => {
                     <span className={styles.circle}></span>
                     <h6>Defense</h6>
                 </article>
-                <article>
-                    <span>Grass</span>
-                    <span>Poison</span>
+                <article className={styles.article_pokemon_element}>
+                    <span className={styles.pokemon_element}><h6>Grass</h6></span>
+                    <span className={styles.pokemon_element}><h6>Poison</h6></span>
                 </article>
             </article>
             <article className={styles.pokemon_container}>
