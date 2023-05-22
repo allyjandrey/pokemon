@@ -7,6 +7,15 @@ export type Pokemon = {
     attack: number,
     defense: number
 }
-type TypePokemon = {
+
+export type TypePokemon = {
     type: string
+}
+
+export type RequestInfoPokemon = {
+    id: number,
+    types: TypePokemon[],
+    image: string,
+    attack: number,
+    defense: number
 }
