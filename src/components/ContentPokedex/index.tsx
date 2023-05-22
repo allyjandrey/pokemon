@@ -1,3 +1,4 @@
+import { CardPokemon } from '../CardPokemon'
 import styles from './index.module.css'
 
 export const ContentPokedex = () => {
@@ -20,6 +21,9 @@ export const ContentPokedex = () => {
                     <select className={styles.select_container}>
                         <option disabled selected hidden>Experience</option>
                     </select>
+                </article>
+                <article>
+                    <CardPokemon />
                 </article>
             </main>
         </section>
