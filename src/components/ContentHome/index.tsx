@@ -1,5 +1,6 @@
 import styles from './index.module.css'
 import banner from '../../assets/BannerCompleto.svg'
+import { NavLink } from 'react-router-dom'
 
 
 export const ContentHome = () => {
@@ -16,7 +17,9 @@ export const ContentHome = () => {
                             it's strenghts, disadvantages and <br />
                             abilities
                         </h2>
-                        <button className={styles.button}>See pokemons</button>
+                        <NavLink to={`/Pokedex`}>
+                            <button className={styles.button}>See pokemons</button>
+                            </NavLink>
                     </article>
                     <article>
                         <img src={banner} alt="Banner do Pikachu com duas pokébolas próximas a ele e nuvens atrás" />
