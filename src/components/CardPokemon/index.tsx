@@ -6,8 +6,12 @@ export const CardPokemon = () => {
             <article className={styles.article_container}>
                 <h3>Pokemon</h3>
                 <article className={styles.pokemon_stats}>
-                    <span className={styles.circle}>119</span>
-                    <span className={styles.circle}>119</span>
+                    <span className={styles.circle}></span>
+                    <h6>Attack</h6>
+                </article>
+                <article className={styles.pokemon_stats}>
+                    <span className={styles.circle}></span>
+                    <h6>Defense</h6>
                 </article>
             </article>
         </section>
