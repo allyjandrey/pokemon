@@ -14,6 +14,9 @@ export const CardPokemon = () => {
                     <h6>Defense</h6>
                 </article>
             </article>
+            <article className={styles.pokemon_container}>
+                <h1>a</h1>
+            </article>
         </section>
     )
 }
