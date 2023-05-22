@@ -50,3 +50,7 @@
 
     box-sizing: border-box;
 }
+
+.pokemon_container {
+    width: 231px;
+}
