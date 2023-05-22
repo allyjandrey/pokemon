@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 
 export const CardPokemon = () => {
     const [Pokemons, setPokemons] = useState<Pokemon[]>([])
+
     async function GetInfoPokemons(url: string): Promise<RequestInfoPokemon> {
         const response = await api.get(url)
         const { id, types } = response.data;
@@ -19,10 +20,10 @@ export const CardPokemon = () => {
 
     useEffect(() => {
         async function getPokemons() {
-            const response = await api.get('pokemon/?limit=20$offset=20')
-            const { res } = response.data;
+            const response = await api.get('pokemon/?limit=20&offset=20')
+            const { results } = response.data;
             const dataPokemons = await Promise.all(
-                res.map(async (pokemon: Pokemon) => {
+                results.map(async (pokemon: Pokemon) => {
                     const {
                         id,
                         types,
@@ -41,11 +42,12 @@ export const CardPokemon = () => {
                     }
                 })
             )
-            console.log(dataPokemons)
+            console.log(dataPokemons);
             setPokemons(dataPokemons);
         }
         getPokemons()
     }, [])
+
 
     return (
         <section className={styles.section_container}>
