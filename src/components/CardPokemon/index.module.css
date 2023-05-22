@@ -26,6 +26,7 @@
 
 .pokemon_stats {
     display: inline-block;
+    margin: 0;
 }
 
 .pokemon_stats h6 {
