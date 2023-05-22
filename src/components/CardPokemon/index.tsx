@@ -1,6 +1,22 @@
 import styles from './index.module.css'
+import { Pokemon, RequestInfoPokemon } from '../../models/pokemons'
+import { api } from '../../services/api'
+import { useState } from 'react'
 
 export const CardPokemon = () => {
+    const [Pokemons, setPokemons] = useState<Pokemon[]>([])
+    async function GetInfoPokemons(url: string): Promise<RequestInfoPokemon> {
+        const response = await api.get(url)
+        const { id, types } = response.data;
+        return {
+            id,
+            types,
+            image: response.data.sprites.other.home.front_default,
+            attack: response.data.stats[1].base_stat,
+            defense: response.data.stats[2].base_stat
+        }
+    }
+
     return (
         <section className={styles.section_container}>
             <article className={styles.article_container}>
