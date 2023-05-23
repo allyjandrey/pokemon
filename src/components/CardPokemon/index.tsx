@@ -49,27 +49,31 @@ export const CardPokemon = () => {
     }, [])
 
     return (
-        <section className={styles.section_container}>
+        <article className={styles.article_container}>
             {Pokemons.map((poke) => (
-                <article className={styles.article_container}>
-                    <h3>{poke.name}</h3>
-                    <article className={styles.pokemon_stats}>
-                        <span className={styles.circle}>{poke.attack}</span>
-                        <h6>Attack</h6>
+                <article className={styles.card_container}>
+                    <article className={styles.card_container_left}>
+                        <article className={styles.card_name}>
+                            <h3>{poke.name}</h3>
+                        </article>
+                        <article className={styles.card_stats}>
+                            <span className={styles.card_circle}>{poke.attack}</span>
+                            <span className={styles.card_circle}>{poke.defense}</span>
+                        </article>
+                        <article className={styles.card_attributes}>
+                            <h6>Attack</h6>
+                            <h6>Defense</h6>
+                        </article>
+                        <article className={styles.card_pokemon}>
+                            <span className={styles.pokemon_element}>type1</span>
+                            <span className={styles.pokemon_element}>type1</span>
+                        </article>
                     </article>
-                    <article className={styles.pokemon_stats}>
-                        <span className={styles.circle}>{poke.defense}</span>
-                        <h6>Defense</h6>
-                    </article>
-                    <article className={styles.article_pokemon_element}>
-                        <span className={styles.pokemon_element}></span>
-                        <span className={styles.pokemon_element}></span>
-                    </article>
-                    <article className={styles.pokemon_container}>
-                        <img src={poke.image} alt="Imagens dos pokémons" />
+                    <article className={styles.card_container_right}>
+                        <img src={poke.image} alt="Imagem do card" className={styles.pokemon_container} />
                     </article>
                 </article>
-            ))}
-        </section>
+            ))};
+        </article>
     )
 }
