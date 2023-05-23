@@ -48,27 +48,25 @@ export const CardPokemon = () => {
         getPokemons()
     }, [])
 
-
     return (
-        <section className={styles.section_container}>
-            <article className={styles.article_container}>
-                <h3>Pokemon</h3>
-                <article className={styles.pokemon_stats}>
-                    <span className={styles.circle}></span>
-                    <h6>Attack</h6>
+        <section >
+            {Pokemons.map((poke) => (
+                <article >
+                    <h3>{poke.name}</h3>
+                    <article >
+                        <span >{poke.attack}</span>
+                        <h6>Attack</h6>
+                    </article>
+                    <article >
+                        <span >{poke.defense}</span>
+                        <h6>Defense</h6>
+                    </article>
+                    <article>
+                        <span></span>
+                        <span></span>
+                    </article>
                 </article>
-                <article className={styles.pokemon_stats}>
-                    <span className={styles.circle}></span>
-                    <h6>Defense</h6>
-                </article>
-                <article className={styles.article_pokemon_element}>
-                    <span className={styles.pokemon_element}><h6>Grass</h6></span>
-                    <span className={styles.pokemon_element}><h6>Poison</h6></span>
-                </article>
-            </article>
-            <article className={styles.pokemon_container}>
-                <h6>imagem pokemon</h6>
-            </article>
+            ))}
         </section>
     )
 }
