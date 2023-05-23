@@ -65,8 +65,8 @@ export const CardPokemon = () => {
                             <h6>Defense</h6>
                         </article>
                         <article className={styles.card_pokemon}>
-                            <span className={styles.pokemon_element}>type1</span>
-                            <span className={styles.pokemon_element}>type1</span>
+                            <span className={styles.pokemon_element}>{poke.types[0].type.name}</span>
+                            <span className={styles.pokemon_element}>{poke.types.length == 2 ? poke.types[1].type.name : poke.types[0].type.name}</span>
                         </article>
                     </article>
                     <article className={styles.card_container_right}>
