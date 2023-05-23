@@ -22,9 +22,7 @@ export const ContentPokedex = () => {
                         <option disabled selected hidden>Experience</option>
                     </select>
                 </article>
-                <article>
                     <CardPokemon />
-                </article>
             </main>
         </section>
     )
