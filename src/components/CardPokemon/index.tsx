@@ -49,21 +49,21 @@ export const CardPokemon = () => {
     }, [])
 
     return (
-        <section >
+        <section>
             {Pokemons.map((poke) => (
-                <article >
+                <article className={styles.article_container}>
                     <h3>{poke.name}</h3>
-                    <article >
-                        <span >{poke.attack}</span>
+                    <article className={styles.pokemon_stats}>
+                        <span className={styles.circle}>{poke.attack}</span>
                         <h6>Attack</h6>
                     </article>
-                    <article >
-                        <span >{poke.defense}</span>
+                    <article className={styles.pokemon_stats}>
+                        <span className={styles.circle}>{poke.defense}</span>
                         <h6>Defense</h6>
                     </article>
-                    <article>
-                        <span></span>
-                        <span></span>
+                    <article className={styles.article_pokemon_element}>
+                        <span className={styles.pokemon_element}></span>
+                        <span className={styles.pokemon_element}></span>
                     </article>
                 </article>
             ))}
