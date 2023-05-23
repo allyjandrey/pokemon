@@ -9,7 +9,8 @@ export type Pokemon = {
 }
 
 export type TypePokemon = {
-    type: string
+    type: string,
+    url: string
 }
 
 export type RequestInfoPokemon = {
