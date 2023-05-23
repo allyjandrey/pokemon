@@ -20,7 +20,7 @@ export const CardPokemon = () => {
 
     useEffect(() => {
         async function getPokemons() {
-            const response = await api.get('pokemon/?limit=20&offset=20')
+            const response = await api.get('pokemon/?limit=9')
             const { results } = response.data;
             const dataPokemons = await Promise.all(
                 results.map(async (pokemon: Pokemon) => {
@@ -49,7 +49,7 @@ export const CardPokemon = () => {
     }, [])
 
     return (
-        <section>
+        <section className={styles.section_container}>
             {Pokemons.map((poke) => (
                 <article className={styles.article_container}>
                     <h3>{poke.name}</h3>
@@ -64,6 +64,9 @@ export const CardPokemon = () => {
                     <article className={styles.article_pokemon_element}>
                         <span className={styles.pokemon_element}></span>
                         <span className={styles.pokemon_element}></span>
+                    </article>
+                    <article className={styles.pokemon_container}>
+                        <img src={poke.image} alt="Imagens dos pokémons" />
                     </article>
                 </article>
             ))}
