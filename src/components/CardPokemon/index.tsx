@@ -1,5 +1,5 @@
 import styles from './index.module.css'
-import { Pokemon, RequestInfoPokemon } from '../../models/pokemons'
+import { Pokemon, RequestInfoPokemon} from '../../models/pokemons'
 import { api } from '../../services/api'
 import { useEffect, useState } from 'react'
 
@@ -49,22 +49,13 @@ export const CardPokemon = () => {
 
     const PokemonTypeColors = {
 
-        stile: '#A1A1A1',
-        dark: '#A1A1A1',
-        rock: '#A1A1A1',
-        grass: '#70A83B',
-        bug: '#70A83B',
-        ice: '#A2CFF0',
-        water: '#A2CFF0',
+        stile: '#A1A1A1', dark: '#A1A1A1', rock: '#A1A1A1',
+        grass: '#70A83B', bug: '#70A83B',
+        ice: '#A2CFF0', water: '#A2CFF0',
         fire: '#F76745',
-        fighting: '#F76745',
-        dragon: '#F76745',
-        normal: '#76AADB',
-        gosth: '#76AADB',
-        poison: '#A974BC',
-        psychic: '#A974BC',
-        fairy: '#A974BC',
-        ghost: '#A974BC',
+        fighting: '#F76745', dragon: '#F76745',
+        normal: '#76AADB', gosth: '#76AADB',
+        poison: '#A974BC', psychic: '#A974BC', fairy: '#A974BC', ghost: '#A974BC',
         ground: '#9B597B',
         electric: '#F7C545',
         flying: '#A890F0'
