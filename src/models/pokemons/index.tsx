@@ -8,7 +8,7 @@ export type Pokemon = {
     defense: number
 }
 
-type TypePokemon = {
+export type TypePokemon = {
     type: {
         name:string
     }
