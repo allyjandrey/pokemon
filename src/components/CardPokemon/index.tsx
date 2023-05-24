@@ -90,7 +90,13 @@ export const CardPokemon = () => {
                             <span
                                 style={{ backgroundColor: PokemonTypeColors[poke.types[0].type.name] }}
                                 className={styles.pokemon_element}>{poke.types[0].type.name}</span>
-                            <span style={{ backgroundColor: poke.types.length == 2 ? PokemonTypeColors[poke.types[1].type.name] : PokemonTypeColors[poke.types[0].type.name] }} className={styles.pokemon_element}>
+                            <span
+                                style={{
+                                    backgroundColor: poke.types.length == 2
+                                        ? PokemonTypeColors[poke.types[1].type.name]
+                                        : PokemonTypeColors[poke.types[0].type.name]
+                                }}
+                                className={styles.pokemon_element}>
                                 {poke.types.length == 2 ? poke.types[1].type.name : poke.types[0].type.name}
                             </span>
                         </article>
