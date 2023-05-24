@@ -5,6 +5,7 @@ import './global.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Home } from './routes/Home.tsx';
 import { Pokedex } from './routes/Pokedex.tsx';
+import { NotFound } from './components/NotFound/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -14,10 +15,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        errorElement: <NotFound />
       },
       {
         path: "/Pokedex",
         element: <Pokedex />,
+        errorElement: <NotFound />
       },
     ],
   },
