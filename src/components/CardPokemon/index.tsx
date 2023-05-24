@@ -1,5 +1,5 @@
 import styles from './index.module.css'
-import { Pokemon, RequestInfoPokemon} from '../../models/pokemons'
+import { Pokemon, PokemonTypes, RequestInfoPokemon } from '../../models/pokemons'
 import { api } from '../../services/api'
 import { useEffect, useState } from 'react'
 
@@ -20,7 +20,7 @@ export const CardPokemon = () => {
 
     useEffect(() => {
         async function getPokemons() {
-            const response = await api.get('pokemon/?limit=9')
+            const response = await api.get(`pokemon/?limit=9`)
             const { results } = response.data;
             const dataPokemons = await Promise.all(
                 results.map(async (pokemon: Pokemon) => {
@@ -47,7 +47,7 @@ export const CardPokemon = () => {
         getPokemons()
     }, [])
 
-    const PokemonTypeColors = {
+    const PokemonTypeColors: Record<PokemonTypes, string> = {
 
         stile: '#A1A1A1', dark: '#A1A1A1', rock: '#A1A1A1',
         grass: '#70A83B', bug: '#70A83B',
@@ -79,13 +79,13 @@ export const CardPokemon = () => {
                         </article>
                         <article className={styles.card_pokemon}>
                             <span
-                                style={{ backgroundColor: PokemonTypeColors[poke.types[0].type.name] }}
+                                style={{ backgroundColor: PokemonTypeColors[poke.types[0].type.name as PokemonTypes] }}
                                 className={styles.pokemon_element}>{poke.types[0].type.name}</span>
                             <span
                                 style={{
                                     backgroundColor: poke.types.length == 2
-                                        ? PokemonTypeColors[poke.types[1].type.name]
-                                        : PokemonTypeColors[poke.types[0].type.name]
+                                        ? PokemonTypeColors[poke.types[1].type.name as PokemonTypes]
+                                        : PokemonTypeColors[poke.types[0].type.name as PokemonTypes]
                                 }}
                                 className={styles.pokemon_element}>
                                 {poke.types.length == 2 ? poke.types[1].type.name : poke.types[0].type.name}
@@ -93,7 +93,7 @@ export const CardPokemon = () => {
                         </article>
                     </article>
                     <article
-                        style={{ backgroundColor: PokemonTypeColors[poke.types[0].type.name] }}
+                        style={{ backgroundColor: PokemonTypeColors[poke.types[0].type.name as PokemonTypes] }}
                         className={styles.card_container_right}>
                         <img src={poke.image} alt="Imagem do card" className={styles.pokemon_container} />
                     </article>
