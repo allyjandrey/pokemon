@@ -9,9 +9,20 @@ export type Pokemon = {
 }
 
 export type TypePokemon = {
-    type: string,
-    url: string
+    type: {
+        name: string
+    }
 }
+
+export type PokemonTypes = 'stile' | 'dark' | 'rock'
+    | 'grass' | 'bug'
+    | 'ice' | 'water'
+    | 'fire' | 'fighting' | 'dragon'
+    | 'normal' | 'gosth'
+    | 'poison' | 'psychic' | 'fairy' | 'ghost'
+    | 'ground'
+    | 'electric'
+    | 'flying';
 
 export type RequestInfoPokemon = {
     id: number,
