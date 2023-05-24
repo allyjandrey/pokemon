@@ -1,0 +1,39 @@
+.section_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--danger);
+}
+
+.section_container h1 {
+    font-family: Karla;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 700px;
+    line-height: 818px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 4px;
+
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
+.white_text {
+    font-family: Karla;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+
+    color: #F2F2F2;
+}
+
+.black_text {
+    font-family: Karla;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+
+    color: #000000;
+}
