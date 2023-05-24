@@ -8,9 +8,10 @@ export type Pokemon = {
     defense: number
 }
 
-export type TypePokemon = {
-    type: string,
-    url: string
+type TypePokemon = {
+    type: {
+        name:string
+    }
 }
 
 export type RequestInfoPokemon = {
