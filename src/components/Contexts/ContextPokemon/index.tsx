@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import { Pokemon, RequestInfoPokemon } from '../../../models/pokemons'
-import {api} from '../../../services/api';
+import { api } from '../../../services/api';
 
 type PokemonContextProviderProps = {
     children: React.ReactNode
@@ -25,7 +25,7 @@ const PokemonContext = createContext<PokemonContextProps>(DEFAULT_VALUE);
 
 const PokemonContextProvider = ({ children }: PokemonContextProviderProps) => {
     const [pokemon, setPokemon] = useState<Pokemon[]>([]);
-    const [count, setCount] = useState<number>(0);
+    const [count, setCount] = useState<number>(9);
 
     async function GetInfoPokemons(url: string): Promise<RequestInfoPokemon> {
         const response = await api.get(url)
@@ -38,11 +38,11 @@ const PokemonContextProvider = ({ children }: PokemonContextProviderProps) => {
             defense: response.data.stats[2].base_stat
         }
     }
-    
+
     useEffect(() => {
         async function getPokemons() {
-            const response = await api.get('pokemon/?limit=9')
-            const { results, count } = response.data;
+            const response = await api.get(`pokemon/?limit=${count}`)
+            const { results } = response.data;
             const pokemonData = await Promise.all(
                 results.map(async (pokemon: Pokemon) => {
                     const {
@@ -63,12 +63,11 @@ const PokemonContextProvider = ({ children }: PokemonContextProviderProps) => {
                     }
                 })
             )
-            console.log(count)
             setPokemon(pokemonData);
             setCount(count)
         }
         getPokemons()
-    }, []);
+    }, [count]);
 
     return (
         <PokemonContext.Provider value={{ pokemon, setPokemon, count, setCount }}>
