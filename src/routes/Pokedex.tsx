@@ -1,11 +1,12 @@
 import { ContentPokedex } from "../components/ContentPokedex"
+import { PokemonContextProvider } from "../components/Contexts/ApiPokemon"
 import { Header } from "../components/Header"
 
 export const Pokedex = () => {
     return (
-        <>
-        <Header />
-        <ContentPokedex />
-        </>
+        <PokemonContextProvider>
+            <Header />
+            <ContentPokedex />
+        </PokemonContextProvider>
     )
 }
