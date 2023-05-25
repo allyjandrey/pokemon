@@ -1,10 +1,9 @@
 import styles from './index.module.css'
 import { PokemonTypes } from '../../models/pokemons'
-import { useContext } from 'react'
-import PokemonContext from '../Contexts/ContextPokemon'
+import usePokemonContext from '../../hooks/usePokemonContext'
 
 export const CardPokemon = () => {
-    const { pokemon } = useContext(PokemonContext)
+    const { pokemon } = usePokemonContext()
 
     const PokemonTypeColors: Record<PokemonTypes, string> = {
 
