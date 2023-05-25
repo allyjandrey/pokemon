@@ -19,12 +19,6 @@ export const ContentPokedex = () => {
                     <select className={styles.select_container}>
                         <option disabled selected hidden>Type</option>
                     </select>
-                    <select className={styles.select_container}>
-                        <option disabled selected hidden>Attack</option>
-                    </select>
-                    <select className={styles.select_container}>
-                        <option disabled selected hidden>Experience</option>
-                    </select>
                 </article>
                 <CardPokemon />
             </main>
