@@ -4,7 +4,7 @@ import styles from './index.module.css'
 
 export const ContentPokedex = () => {
 
-    const { count } = usePokemonContext()
+    const { count, offset, setOffset } = usePokemonContext()
 
     return (
         <section className={styles.section_container}>
@@ -28,6 +28,9 @@ export const ContentPokedex = () => {
                 </article>
                 <CardPokemon />
             </main>
+            <button
+                onClick={() => setOffset(offset + 9)}
+                className={styles.button}>Carregar mais</button>
         </section>
     )
 }
