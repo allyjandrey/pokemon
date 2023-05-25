@@ -21,7 +21,7 @@ export const ContentHome = () => {
                             <button className={styles.button}>See pokemons</button>
                             </NavLink>
                     </article>
-                    <article>
+                    <article className={styles.img_container}>
                         <img src={banner} alt="Banner do Pikachu com duas pokébolas próximas a ele e nuvens atrás" />
                     </article>
                 </article>
