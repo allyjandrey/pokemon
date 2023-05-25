@@ -2,6 +2,10 @@
     min-height: calc(100vh - 93px);
 
     background: linear-gradient(180deg, #FFFFFF 30.32%, #F5F5F5 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .input_container {
@@ -82,3 +86,31 @@
 .select_container:focus {
     outline: none;
 }
+
+.button {
+    position: fixed;
+    text-align: center;
+    margin-top: 650px;
+
+    width: 231px;
+    height: 66px;
+
+    font-family: Karla;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+
+    background: #F2CB07;
+    box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+    border-radius: 11px;
+    border: none;
+
+    filter: opacity(30%);
+
+    color: var(--dark);
+}
+
+.button:hover {
+    filter: opacity(100%);
+}
+
