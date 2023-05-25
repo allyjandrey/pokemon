@@ -16,7 +16,7 @@ export default function NotFound() {
                 </article>
                 <NavLink to={`/`} className={styles.container_button}>
                     <button className={styles.button}><h6>Return</h6></button>
-                    </NavLink>
+                </NavLink>
             </article>
         </section>
     )
