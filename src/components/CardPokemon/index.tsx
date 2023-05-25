@@ -1,7 +1,7 @@
 import styles from './index.module.css'
 import { PokemonTypes } from '../../models/pokemons'
 import { useContext } from 'react'
-import PokemonContext from '../Contexts/ApiPokemon'
+import PokemonContext from '../Contexts/ContextPokemon'
 
 export const CardPokemon = () => {
     const { pokemon } = useContext(PokemonContext)
