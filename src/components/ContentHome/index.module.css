@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 185px;
+    padding: 0px 0px 0px 190px;
 }
 
 h1 {
@@ -45,4 +45,8 @@ h2 {
 .button:hover {
     cursor: pointer;
     filter: brightness(1.1);
+}
+
+.img_container {
+    padding: 0px 0px 0px 43px;
 }
